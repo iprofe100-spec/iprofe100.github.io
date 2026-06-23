@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,12 +30,12 @@
     display:flex;justify-content:center;
   }
   .app{width:100%;max-width:840px;margin:auto 0}
-
+ 
   /* ---------- pantallas ---------- */
   .screen{display:none;animation:fade .35s ease}
   .screen.on{display:block}
   @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
+ 
   /* ---------- inicio ---------- */
   .hero{text-align:center;margin:8px 0 26px}
   .logo{
@@ -50,7 +51,7 @@
   }
   h1{font-size:46px;line-height:1.05;margin:16px 0 8px;letter-spacing:.01em}
   .sub{color:var(--soft);font-size:19px;font-weight:bold}
-
+ 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
   .card{
     background:var(--card);border:3px solid var(--line);
@@ -68,13 +69,13 @@
     margin-top:12px;font-size:21px;font-weight:bold;
     text-transform:uppercase;letter-spacing:.04em;
   }
-
+ 
   /* ---------- banderas ---------- */
   .flagimg,.fsvg{display:block;border-radius:8px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
   .card .flag .flagimg,.card .flag .fsvg{width:100px;height:auto}
   #gFlag .flagimg,#gFlag .fsvg{width:52px;height:auto}
   .pod .pflag .flagimg,.pod .pflag .fsvg{width:48px;height:auto;margin:0 auto}
-
+ 
   .rank-btn{
     margin:26px auto 0;display:flex;align-items:center;gap:12px;
     background:var(--ink);color:#fff;border:none;cursor:pointer;
@@ -85,7 +86,7 @@
   }
   .rank-btn:active{transform:translateY(3px);box-shadow:0 3px 0 #0a1a2b}
   .rank-btn .em{font-size:26px}
-
+ 
   /* ---------- juego ---------- */
   .topbar{display:flex;align-items:center;gap:14px;margin-bottom:18px}
   .back{
@@ -96,7 +97,7 @@
   .back:active{transform:translateY(3px);box-shadow:0 2px 0 var(--line)}
   .gflag{display:inline-flex;align-items:center}
   .gname{font-size:24px;font-weight:bold;text-transform:uppercase;letter-spacing:.04em}
-
+ 
   .progress{margin-bottom:16px}
   .progress .label{font-weight:bold;color:var(--soft);font-size:16px;
     text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
@@ -104,7 +105,7 @@
   .dot{flex:1;height:12px;border-radius:6px;background:var(--line)}
   .dot.done{background:var(--green)}
   .dot.now{background:var(--brand)}
-
+ 
   .qcard{
     background:var(--card);border:3px solid var(--line);
     border-radius:var(--r);padding:24px;box-shadow:0 10px 0 var(--line);
@@ -132,7 +133,7 @@
   }
   .speak:active{transform:translateY(3px);box-shadow:0 2px 0 var(--brand-dark)}
   .speak .em{font-size:24px}
-
+ 
   .options{display:grid;gap:14px}
   .options.duo{grid-template-columns:1fr 1fr}
   .opt{
@@ -152,7 +153,7 @@
   .opt .stamp{
     position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:30px
   }
-
+ 
   .next{
     margin-top:20px;width:100%;background:var(--coral);color:#fff;border:none;cursor:pointer;
     font-family:var(--font);font-weight:bold;font-size:24px;
@@ -161,7 +162,7 @@
   }
   .next:active{transform:translateY(3px);box-shadow:0 3px 0 #d24b40}
   .next[hidden]{display:none}
-
+ 
   /* ---------- final ---------- */
   .final{text-align:center;background:var(--card);border:3px solid var(--line);
     border-radius:var(--r);padding:34px 26px;box-shadow:0 10px 0 var(--line)}
@@ -193,7 +194,7 @@
     font-family:var(--font);font-weight:bold;font-size:18px;text-decoration:underline;
     text-transform:uppercase;letter-spacing:.04em;
   }
-
+ 
   /* ---------- ranking ---------- */
   .rank-wrap{background:var(--card);border:3px solid var(--line);
     border-radius:var(--r);padding:30px 24px 34px;box-shadow:0 10px 0 var(--line);text-align:center}
@@ -219,7 +220,7 @@
     padding:18px 30px;border-radius:16px;box-shadow:0 6px 0 var(--brand-dark);transition:transform .1s;
   }
   .home-btn:active{transform:translateY(3px);box-shadow:0 3px 0 var(--brand-dark)}
-
+ 
   @media(max-width:560px){
     body{padding:14px}
     h1{font-size:36px}
@@ -238,7 +239,7 @@
 </head>
 <body>
 <div class="app">
-
+ 
   <!-- INICIO -->
   <section id="inicio" class="screen on">
     <div class="hero">
@@ -251,7 +252,7 @@
       <span class="em">🏆</span> VER RANKING
     </button>
   </section>
-
+ 
   <!-- JUEGO -->
   <section id="juego" class="screen">
     <div class="topbar">
@@ -275,7 +276,7 @@
       <button class="next" id="nextBtn" hidden onclick="nextQuestion()">SIGUIENTE →</button>
     </div>
   </section>
-
+ 
   <!-- FINAL -->
   <section id="final" class="screen">
     <div class="final">
@@ -292,19 +293,19 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- RANKING -->
   <section id="ranking" class="screen">
     <div class="rank-wrap">
       <h2>🏆 LOS 3 MEJORES</h2>
-      <p class="note">RANKING DEL GRUPO</p>
+      <p class="note">LOS MEJORES PUNTAJES</p>
       <div id="podium"></div>
       <button class="home-btn" onclick="goHome()">VOLVER AL INICIO</button>
     </div>
   </section>
-
+ 
 </div>
-
+ 
 <script>
 /* =================== DATOS =================== */
 const COUNTRIES = {
@@ -381,10 +382,10 @@ const COUNTRIES = {
     {t:"¿Qué plaza famosa hay en Moscú?",o:["Plaza Roja","Torre Eiffel","Coliseo","Big Ben"],c:0,e:"🟥",p:"plaza"}
   ]}
 };
-
+ 
 /* =================== BANDERAS =================== */
 const ISO = {sudafrica:'za',brasil:'br',francia:'fr',mexico:'mx',japon:'jp',rusia:'ru'};
-
+ 
 // Banderas dibujadas: respaldo si no hay internet (nunca se ven las letras "ZA", "BR"...)
 const FLAGS_SVG = {
   francia:`<svg viewBox="0 0 90 60" class="fsvg"><rect width="30" height="60" fill="#0055A4"/><rect x="30" width="30" height="60" fill="#fff"/><rect x="60" width="30" height="60" fill="#EF4135"/></svg>`,
@@ -394,18 +395,18 @@ const FLAGS_SVG = {
   brasil:`<svg viewBox="0 0 90 60" class="fsvg"><rect width="90" height="60" fill="#009C3B"/><path d="M45,7 L83,30 L45,53 L7,30 Z" fill="#FFDF00"/><circle cx="45" cy="30" r="15" fill="#002776"/><path d="M33,33 Q45,25 57,32 Q45,30 33,37 Z" fill="#fff"/><g fill="#fff"><circle cx="40" cy="26" r="0.9"/><circle cx="48" cy="25" r="0.9"/><circle cx="52" cy="29" r="0.9"/><circle cx="38" cy="33" r="0.9"/><circle cx="50" cy="35" r="0.9"/><circle cx="44" cy="38" r="0.9"/></g></svg>`,
   mexico:`<svg viewBox="0 0 90 60" class="fsvg"><rect width="30" height="60" fill="#006847"/><rect x="30" width="30" height="60" fill="#fff"/><rect x="60" width="30" height="60" fill="#CE1126"/><g transform="translate(45,31)"><path d="M-6,5 A7,7 0 0 0 6,5" fill="none" stroke="#1f7a36" stroke-width="1.4"/><ellipse cx="0" cy="-2" rx="3.4" ry="2.6" fill="#9b6b2e"/><path d="M-3,-2 Q0,-6 4,-3 Q1,-1 -3,-1 Z" fill="#6b4a26"/><circle cx="-3.5" cy="-1" r="0.9" fill="#1f7a36"/></g></svg>`
 };
-
+ 
 function flagHTML(key){
   const iso = ISO[key];
   return `<img class="flagimg" src="https://flagcdn.com/w320/${iso}.png" alt="${COUNTRIES[key].name}" onerror="flagFallback(this,'${key}')">`;
 }
 function flagFallback(img, key){ img.outerHTML = FLAGS_SVG[key] || ''; }
-
+ 
 /* =================== ESTADO =================== */
 let state = {key:null, list:[], idx:0, score:0, answered:false};
 let memRanking = []; // respaldo si el guardado compartido no está disponible
 const pictoCache = {};
-
+ 
 /* =================== INICIO =================== */
 function buildGrid(){
   const g = document.getElementById('grid');
@@ -419,21 +420,21 @@ function buildGrid(){
     g.appendChild(card);
   });
 }
-
+ 
 function show(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));
   document.getElementById(id).classList.add('on');
   window.scrollTo(0,0);
 }
 function goHome(){ stopSpeak(); show('inicio'); }
-
+ 
 /* =================== JUEGO =================== */
 function shuffle(arr){
   const a = arr.slice();
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
 }
-
+ 
 function startGame(key){
   const c = COUNTRIES[key];
   state = {key, list:shuffle(c.q), idx:0, score:0, answered:false};
@@ -443,7 +444,7 @@ function startGame(key){
   show('juego');
   renderQuestion();
 }
-
+ 
 function buildDots(){
   const d = document.getElementById('dots');
   d.innerHTML = '';
@@ -459,7 +460,7 @@ function paintDots(){
     el.className = 'dot' + (i<state.idx?' done':(i===state.idx?' now':''));
   });
 }
-
+ 
 function renderQuestion(){
   state.answered = false;
   stopSpeak();
@@ -467,7 +468,7 @@ function renderQuestion(){
   document.getElementById('pLabel').textContent = `PREGUNTA ${state.idx+1} DE ${state.list.length}`;
   paintDots();
   document.getElementById('qText').textContent = q.t;
-
+ 
   // pictograma: emoji al instante, ARASAAC encima si la red lo permite
   const picto = document.getElementById('picto');
   picto.textContent = q.e;
@@ -479,7 +480,7 @@ function renderQuestion(){
       img.src = url;
     }
   });
-
+ 
   // opciones (orden aleatorio)
   const box = document.getElementById('options');
   box.innerHTML = '';
@@ -496,7 +497,7 @@ function renderQuestion(){
   });
   document.getElementById('nextBtn').hidden = true;
 }
-
+ 
 function choose(btn, isCorrect){
   if(state.answered) return;
   state.answered = true;
@@ -520,7 +521,7 @@ function choose(btn, isCorrect){
   speak(isCorrect ? "¡Muy bien!" : "Casi. La respuesta correcta es " + correctText);
   document.getElementById('nextBtn').hidden = false;
 }
-
+ 
 function nextQuestion(){
   if(state.idx < state.list.length-1){
     state.idx++;
@@ -529,7 +530,7 @@ function nextQuestion(){
     endGame();
   }
 }
-
+ 
 /* =================== AUDIO =================== */
 function stopSpeak(){ if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
 function speak(text){
@@ -544,7 +545,7 @@ function speakQuestion(){
   const opciones = q.o.join('. ');
   speak(q.t + '. ' + opciones);
 }
-
+ 
 /* =================== PICTOGRAMAS ARASAAC =================== */
 async function loadPicto(keyword){
   if(keyword in pictoCache) return pictoCache[keyword];
@@ -565,7 +566,7 @@ async function loadPicto(keyword){
   pictoCache[keyword] = null;
   return null;
 }
-
+ 
 /* =================== FINAL =================== */
 function endGame(){
   stopSpeak();
@@ -590,20 +591,46 @@ function checkName(){
   const v = document.getElementById('nameInput').value.trim();
   document.getElementById('saveBtn').disabled = v.length===0;
 }
-
-/* =================== RANKING (compartido) =================== */
+ 
+/* =================== RANKING =================== */
+/* Funciona en dos entornos:
+   - Dentro de Claude: usa el guardado compartido (todas las máquinas ven lo mismo).
+   - Publicado en la web (ej. GitHub Pages): usa el guardado del navegador,
+     que conserva el Top 3 de forma permanente en cada computadora. */
+const STORE_KEY = 'rankingPaises';
+ 
+function hasClaudeStorage(){
+  return typeof window !== 'undefined' && window.storage && typeof window.storage.get === 'function';
+}
+ 
 async function getRanking(){
+  if(hasClaudeStorage()){
+    try{
+      const r = await window.storage.get('ranking', true);
+      return r && r.value ? JSON.parse(r.value) : [];
+    }catch(e){}
+  }
   try{
-    const r = await window.storage.get('ranking', true);
-    return r && r.value ? JSON.parse(r.value) : [];
-  }catch(e){ return memRanking; }
+    const raw = localStorage.getItem(STORE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  }catch(e){}
+  return memRanking;
 }
+ 
 async function putRanking(list){
+  if(hasClaudeStorage()){
+    try{
+      await window.storage.set('ranking', JSON.stringify(list), true);
+      return;
+    }catch(e){}
+  }
   try{
-    await window.storage.set('ranking', JSON.stringify(list), true);
-  }catch(e){ memRanking = list; }
+    localStorage.setItem(STORE_KEY, JSON.stringify(list));
+    return;
+  }catch(e){}
+  memRanking = list;
 }
-
+ 
 async function saveScore(){
   const name = document.getElementById('nameInput').value.trim().toUpperCase().slice(0,14);
   if(!name) return;
@@ -615,7 +642,7 @@ async function saveScore(){
   await putRanking(list.slice(0,20));
   showRanking();
 }
-
+ 
 async function showRanking(){
   stopSpeak();
   const list = await getRanking();
@@ -643,9 +670,9 @@ async function showRanking(){
   }
   show('ranking');
 }
-
+ 
 function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
-
+ 
 /* =================== ARRANQUE =================== */
 buildGrid();
 // "calentar" voces de síntesis (algunos navegadores las cargan tarde)
@@ -653,3 +680,4 @@ if('speechSynthesis' in window){ window.speechSynthesis.getVoices(); }
 </script>
 </body>
 </html>
+ 
